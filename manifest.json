@@ -1,0 +1,20 @@
+{
+	"name" : "ETC project gets mac extension",
+	"version" : "1.0.0",
+	"description" : "ETC Project Gets Mac Address",
+	"background" : { "scripts": ["background.js"] },
+	"permissions" : [
+		"nativeMessaging",
+		"tabs",
+		"http://*/*",
+		"https://*/*"
+	],
+	"content_scripts": [
+    {
+	  "matches": ["https://220.197.14.48:8000/*","http://220.197.14.48:8000/*"],
+      "js": ["content.js"]
+    }
+	],
+	"minimum_chrome_version" : "6.0.0.0",
+	"manifest_version": 2
+}
